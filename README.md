@@ -1,6 +1,6 @@
 # F5 MCP Server
 
-This project is a **MCP server** designed to interact with F5 devices using the **iControl REST API**. It provides a set of tools to manage F5 objects such as virtual servers (VIPs), pools, iRules, and profiles. The server is implemented using the `FastMCP` framework and exposes functionalities for creating, updating, listing, and deleting F5 objects.
+This project is a **MCP( Model Context Protocol ) server** designed to interact with F5 devices using the **iControl REST API**. It provides a set of tools to manage F5 objects such as virtual servers (VIPs), pools, iRules, and profiles. The server is implemented using the `FastMCP` framework and exposes functionalities for creating, updating, listing, and deleting F5 objects.
 
 ## Features
 
