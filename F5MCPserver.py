@@ -49,7 +49,7 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            pool_name is the name of the pool to be updated.
+            object_type can be : vip,pool,irule or profile
 
         The configuration of the pool is the body for an PATCH request.
        
@@ -63,9 +63,9 @@ def delete_tool(url_body: dict, object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            pool_name is the name of the pool to be updated.
+            object_type can be : vip,pool,irule or profile
 
-        The configuration of the pool is the body for an PATCH request.
+        The configuration of the object is the body for an DELETE request.
        
     """    
     # using python requests
