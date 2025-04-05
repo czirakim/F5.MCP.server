@@ -15,5 +15,8 @@ This project is a **Multi-Channel Protocol (MCP) server** designed to interact w
 - **`F5MCPserver.py`**: The main server file that initializes the MCP server and defines the tools.
 - **`Tools/F5object.py`**: A utility class for performing CRUD operations on F5 objects.
 
+### Credits
+**`This was written by Mihai Cziraki
+
 
 
