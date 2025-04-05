@@ -9,3 +9,11 @@ This project is a **Multi-Channel Protocol (MCP) server** designed to interact w
 - **Environment Configuration**: Sensitive information like IP addresses and authorization strings are managed through environment variables loaded from a `.env` file.
 - **Extensibility**: Modular design allows additional tools or functionalities to be added easily.
 - **Transport Support**: The server runs using the `stdio` transport, making it compatible with various client integrations.
+
+### Key Files
+
+- **`F5MCPserver.py`**: The main server file that initializes the MCP server and defines the tools.
+- **`Tools/F5object.py`**: A utility class for performing CRUD operations on F5 objects.
+
+
+
