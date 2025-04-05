@@ -1,0 +1,25 @@
+
+### pool and VIP
+
+'can you create a pool named pool_test_2 that has round robin as load balancing method, http monitor and 2 members: name web2, ip  113.3.3.3 on port 8090 and name web3 , ip 14.4.44.4 on port 8080
+and then create vip with name VIP67 with ip 60.67.67.67 on port 80 and add the pool you created previously to this vip'
+
+### add pool member
+'to pool_test_1 can you add another member with the name web4 , ip 115.5.5.5 and port 8081'
+
+### delete vip and pool
+
+'can you delete vip with the name VIP888 and also the pool that it is assigned to it'
+
+### delete evrythin asociated to the vip
+'can you delete VIP67 and the objects associated to it like pool,nodes,irule'
+
+
+
+
+
+
+
+
+ 
+ 
