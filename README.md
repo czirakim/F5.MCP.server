@@ -15,7 +15,8 @@ This project is a **Multi-Channel Protocol (MCP) server** designed to interact w
 - **`F5MCPserver.py`**: The main server file that initializes the MCP server and defines the tools.
 - **`Tools/F5object.py`**: A utility class for performing CRUD operations on F5 objects.
 
-The repo also contains an example of claude desktop app config file.
+The repo also contains an example of the Claude desktop app config file.
+Only `F5object.py` is used from the Tools folder. The others were used in development.
 
 ### Credits
 This was written by Mihai Cziraki
