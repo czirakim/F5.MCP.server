@@ -16,7 +16,7 @@ This project is a **Multi-Channel Protocol (MCP) server** designed to interact w
 - **`Tools/F5object.py`**: A utility class for performing CRUD operations on F5 objects.
 
 ### Credits
-**`This was written by Mihai Cziraki
+This was written by Mihai Cziraki
 
 
 
