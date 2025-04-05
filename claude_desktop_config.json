@@ -5,7 +5,7 @@
 			"args": [
 				"bash", 
 				"-c",
-				"source .venv/bin/activate && python F5MCPserver.py"   # you might need to but the full path to your environment and your server file
+				"source .venv/bin/activate && python F5MCPserver.py"
 			  ]
 		}
 	}
