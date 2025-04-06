@@ -20,6 +20,7 @@ This project is a **MCP( Model Context Protocol ) server** designed to interact 
 The repo also contains an example of the Claude desktop app config file.
 Only `F5object.py` is used from the Tools folder. The others were used in development.
 
+`It is was tested with Claude Desktop app. The MCP server was hosted in Windows WSL.`
 ### Credits
 This was written by Mihai Cziraki
 
