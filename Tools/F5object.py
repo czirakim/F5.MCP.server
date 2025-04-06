@@ -42,12 +42,12 @@ class F5_object:
         """This tool lists an object on an F5 device using the iControl REST API.         
     
         Args:
-            url_body is the configuration of teh object.
+            object_name is the name of the object. 
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
                     
         """
 
-        url = f"https://{IP_ADDRESS}/mgmt/tm/ltm/{self.object_type}/"
+        url = f"https://{IP_ADDRESS}/mgmt/tm/ltm/{self.object_type}/{self.object_name}"
         # Convert input_data dictionary to JSON string
         #json_payload = str(self.payload).replace("'", '"')  # Ensures proper JSON formatting
 
@@ -66,7 +66,7 @@ class F5_object:
         """This tool creates an object on an F5 device using the iControl REST API.         
     
         Args:
-            url_body is the configuration of teh object.
+            url_body is the configuration of thh object.
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
                     
         """
@@ -88,9 +88,9 @@ class F5_object:
         """ This tool updates an object on an F5 device using the iControl REST API.
 
         Args:
-            url_body is the configuration of teh object.
+            url_body is the configuration of the object.
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
-            object_name is the name of teh object to be updated.                       
+            object_name is the name of the object to be updated.                       
 
         """
 
