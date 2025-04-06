@@ -21,9 +21,9 @@ The repo also contains an example of the Claude desktop app config file.
 Only `F5object.py` is used from the Tools folder. The others were used in development.
 
 ### `It is was tested with Claude Desktop app. The MCP server was hosted in Windows WSL.`
-### Credits
-This was written by Mihai Cziraki
+
 
 <img width="362" alt="image" src="https://github.com/user-attachments/assets/3b699569-e308-4955-9d47-05bc9706d7ee" />
 
-
+### Credits
+This was written by Mihai Cziraki
