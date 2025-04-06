@@ -15,13 +15,13 @@ from Tools.curl import curl_tool
 mcp = FastMCP("my_f5_mcp_server")
 
 @mcp.tool()
-def list_tool(url_body: dict, object_type: str):
+def list_tool(object_name: str, object_type: str):
     """ This tool lists object on an F5 device using the  iControl REST API.
      Args:
-            url_body contains the configuration of the pool. 
+            object_name is the name of the object. 
             object_type can be : vip,pool,irule or profile  
     """
-    list = F5_object(url_body = url_body, object_type = object_type)
+    list = F5_object(object_name = object_name, object_type = object_type)
     return list.list()
 
 
@@ -65,7 +65,7 @@ def delete_tool(url_body: dict, object_type: str, object_name: str):
             url_body contains the configuration of the pool. 
             object_type can be : vip,pool,irule or profile
 
-        The configuration of the object is the body for an DELETE request.
+        The configuration of the pool is the body for an DELETE request.
        
     """    
     # using python requests
