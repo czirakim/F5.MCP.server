@@ -25,7 +25,6 @@ Only `F5object.py` is used from the Tools folder. The others were used in develo
 
 <img width="362" alt="image" src="https://github.com/user-attachments/assets/06ac07e0-2ab7-4675-8c7b-c3809bc364ad" />
 
-![Screenshot 2025-04-08 131334](https://github.com/user-attachments/assets/06ac07e0-2ab7-4675-8c7b-c3809bc364ad)
 
 ### Credits
 This was written by Mihai Cziraki
