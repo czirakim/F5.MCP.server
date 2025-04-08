@@ -11,7 +11,7 @@ This project is a **MCP( Model Context Protocol ) server** designed to interact 
 - **Environment Configuration**: Sensitive information like IP addresses and authorization strings are managed through environment variables loaded from a `.env` file.
 - **Extensibility**: Modular design allows additional tools or functionalities to be added easily.
 - **Transport Support**: The server runs using the `stdio` transport, making it compatible with various client integrations.
-- **Dockerfile: if you want to run this as a Docker container
+- **Dockerfile**: If you want to run this as a Docker container
 
 ### Key Files
 
