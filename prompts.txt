@@ -11,7 +11,7 @@ and then create vip with name VIP67 with ip 60.67.67.67 on port 80 and add the p
 
 'can you delete vip with the name VIP888 and also the pool that it is assigned to it'
 
-### delete evrythin asociated to the vip
+### delete everything associated to the vip
 'can you delete VIP67 and the objects associated to it like pool,nodes,irule'
 
 
