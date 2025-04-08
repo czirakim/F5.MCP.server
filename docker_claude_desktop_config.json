@@ -1,0 +1,14 @@
+{
+	"mcpServers": {
+		"F5McpServer": {
+			"command": "wsl.exe",
+			"args": [
+				"docker",				
+				"run",
+				"-i",
+				"--rm",
+				"f5-mcp-server"
+			  ]
+		}
+	}
+}
