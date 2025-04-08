@@ -23,7 +23,7 @@ Only `F5object.py` is used from the Tools folder. The others were used in develo
 ### `It was tested with the Claude Desktop app. The MCP server was hosted in Windows WSL.`
 
 
-<img width="362" alt="image" src="https://github.com/user-attachments/assets/3b699569-e308-4955-9d47-05bc9706d7ee" />
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/06ac07e0-2ab7-4675-8c7b-c3809bc364ad" />
 
 ![Screenshot 2025-04-08 131334](https://github.com/user-attachments/assets/06ac07e0-2ab7-4675-8c7b-c3809bc364ad)
 
