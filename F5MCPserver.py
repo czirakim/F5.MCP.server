@@ -6,9 +6,8 @@ This is a MCP server, that interacts with an F5 device using iControl REST API.
 """
 
 from mcp.server.fastmcp import FastMCP
-#from Tools.list import F5list
 from Tools.F5object import F5_object
-from Tools.curl import curl_tool
+
 
 
 # Initialize FastMCP server
