@@ -31,7 +31,7 @@ def create_tool(url_body: dict, object_type: str):
         Args:
             url_body contains the configuration of the pool. 
             object_type can be : vip,pool,irule or profile  
-        The configuration of the pool is the body for an POST request.        
+        The configuration of the object is the body for an POST request.        
        
         """  
     # using python requests
@@ -50,7 +50,7 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
             url_body contains the configuration of the pool. 
             object_type can be : vip,pool,irule or profile
 
-        The configuration of the pool is the body for an PATCH request.
+        The configuration of the object is the body for an PATCH request.
        
     """    
     # using python requests
@@ -62,9 +62,7 @@ def delete_tool(url_body: dict, object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            object_type can be : vip,pool,irule or profile
-
-        The configuration of the pool is the body for an DELETE request.
+            object_type can be : vip,pool,irule or profile       
        
     """    
     # using python requests
