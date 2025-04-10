@@ -48,7 +48,8 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            object_type can be : vip,pool,irule or profile
+            object_type can be : vip,pool,irule or profile.
+            object_name is the name of the object.
 
         The configuration of the object is the body for an PATCH request.
        
@@ -58,15 +59,15 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
     return update.update()
 
 @mcp.tool()
-def delete_tool(url_body: dict, object_type: str, object_name: str):
+def delete_tool(object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
         Args:
-            url_body contains the configuration of the pool. 
-            object_type can be : vip,pool,irule or profile       
+            object_type can be : vip,pool,irule or profile
+            object_name is the name of the object.
        
     """    
     # using python requests
-    delete = F5_object(url_body = url_body, object_type = object_type, object_name = object_name)
+    delete = F5_object(object_type = object_type, object_name = object_name)
     return delete.delete()
 
 if __name__ == "__main__":
