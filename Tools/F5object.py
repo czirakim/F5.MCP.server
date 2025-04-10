@@ -66,7 +66,7 @@ class F5_object:
         """This tool creates an object on an F5 device using the iControl REST API.         
     
         Args:
-            url_body is the configuration of thh object.
+            url_body is the configuration of the object.
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
                     
         """
