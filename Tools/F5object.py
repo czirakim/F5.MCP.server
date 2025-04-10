@@ -111,9 +111,8 @@ class F5_object:
         """ This tool deletes an object from an F5 device using the iControl REST API.
 
         Args:
-            url_body is the configuration of teh object.
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.                      
-            object_name is the name of teh object to be deleted.
+            object_name is the name of the object to be deleted.
         """
 
         url = f"https://{IP_ADDRESS}/mgmt/tm/ltm/{self.object_type}/{self.object_name}"
