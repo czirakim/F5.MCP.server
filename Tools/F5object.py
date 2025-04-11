@@ -37,7 +37,58 @@ class F5_object:
         self.payload = kwargs.get('url_body', None)
         self.object_type = kwargs.get('object_type', None)
         self.object_name = kwargs.get('object_name', None)
+        self.lines_number = kwargs.get('lines_number', None)
     
+    def stats(self):
+        """This tool shows the stats of an object from an F5 device using the iControl REST API.         
+    
+        Args:
+            object_name is the name of the object. 
+            object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
+                    
+        """
+
+        url = f"https://{IP_ADDRESS}/mgmt/tm/ltm/{self.object_type}/{self.object_name}/stats"
+        
+
+        try:
+            response = requests.request("GET", url, headers=headers, verify=False, timeout=20)
+            response.raise_for_status()   
+        except requests.exceptions.HTTPError:
+            if (response.status_code == 400 or response.status_code == 404):
+                return f"An error occurred while making the request: {response.text}"
+        except requests.exceptions.RequestException as e:
+            return f"An error occurred while making the request: {e}"
+        else:
+            return response.text
+        
+    def logs(self):
+        """ This tool shows the lines_number of logs from an F5 device using the iControl REST API.         
+    
+        Args:
+            lines_number is the number of lines to be returned.
+                    
+        """ 
+
+        url = f"https://{IP_ADDRESS}/mgmt/tm/util/bash"
+        
+        payload = {
+            'command': 'run',
+            'utilCmdArgs': f"-c 'cat /var/log/ltm | tail -n {self.lines_number}'"
+        }
+
+        try:
+            response = requests.request("POST", url, headers=headers, json=payload, verify=False, timeout=20)
+            response.raise_for_status()
+        except requests.exceptions.HTTPError:
+            if (response.status_code == 400 or response.status_code == 404):
+                return f"An error occurred while making the request: {response.text}"
+        except requests.exceptions.RequestException as e:
+            return f"An error occurred while making the request: {e}"
+        else:
+            return response.text
+        
+
     def list(self):
         """This tool lists an object on an F5 device using the iControl REST API.         
     
@@ -66,7 +117,7 @@ class F5_object:
         """This tool creates an object on an F5 device using the iControl REST API.         
     
         Args:
-            url_body is the configuration of the object.
+            url_body is the configuration of teh object.
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
                     
         """
@@ -88,9 +139,9 @@ class F5_object:
         """ This tool updates an object on an F5 device using the iControl REST API.
 
         Args:
-            url_body is the configuration of the object.
+            url_body is the configuration of teh object.
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
-            object_name is the name of the object to be updated.                       
+            object_name is the name of teh object to be updated.                       
 
         """
 
@@ -112,7 +163,7 @@ class F5_object:
 
         Args:
             object_type is the type of the object to be created. It can be : vip,pool,irule or profile.                      
-            object_name is the name of the object to be deleted.
+            object_name is the name of teh object to be deleted.
         """
 
         url = f"https://{IP_ADDRESS}/mgmt/tm/ltm/{self.object_type}/{self.object_name}"
