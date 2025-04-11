@@ -8,14 +8,32 @@ This is a MCP server, that interacts with an F5 device using iControl REST API.
 from mcp.server.fastmcp import FastMCP
 from Tools.F5object import F5_object
 
-
-
 # Initialize FastMCP server
 mcp = FastMCP("my_f5_mcp_server")
 
+
+@mcp.tool()
+def show_stats_tool(object_name: str, object_type: str):
+    """ This tool shows the stats of an object from an F5 device using the iControl REST API.
+     Args:
+            object_name is the name of the object. 
+            object_type can be : vip,pool,irule or profile  
+    """
+    stats = F5_object(object_name = object_name, object_type = object_type)
+    return stats.stats()
+
+@mcp.tool()
+def show_logs_tool(lines_number: str):
+    """This tool shows the lines_number of logs from an F5 device using the iControl REST API.
+     Args:
+            lines_number is the number of lines to be returned.  
+    """
+    logs = F5_object(lines_number = lines_number)
+    return logs.logs()
+
 @mcp.tool()
 def list_tool(object_name: str, object_type: str):
-    """ This tool lists object on an F5 device using the  iControl REST API.
+    """ This tool lists object on an F5 device using the iControl REST API.
      Args:
             object_name is the name of the object. 
             object_type can be : vip,pool,irule or profile  
@@ -24,10 +42,9 @@ def list_tool(object_name: str, object_type: str):
     return list.list()
 
 
-
 @mcp.tool()
 def create_tool(url_body: dict, object_type: str):
-    """ This tool creates an object on an F5 device using the  iControl REST API.
+    """ This tool creates an object on an F5 device using the iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
             object_type can be : vip,pool,irule or profile  
@@ -38,17 +55,13 @@ def create_tool(url_body: dict, object_type: str):
     create = F5_object(url_body = url_body, object_type = object_type)
     return create.create()
 
-    # using curl tool
-    #create_pool = curl_tool(input_data = url_body)
-    #return create_pool
-
 
 @mcp.tool()
 def update_tool(url_body: dict, object_type: str, object_name: str):
-    """ This tool updates an object on an F5 device using the  iControl REST API.
+    """ This tool updates an object on an F5 device using the iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            object_type can be : vip,pool,irule or profile.
+            object_type can be : vip,pool,irule or profile
             object_name is the name of the object.
 
         The configuration of the object is the body for an PATCH request.
@@ -61,9 +74,11 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
 @mcp.tool()
 def delete_tool(object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
-        Args:
+        Args:            
             object_type can be : vip,pool,irule or profile
             object_name is the name of the object.
+
+        The configuration of the pool is the body for an DELETE request.
        
     """    
     # using python requests
