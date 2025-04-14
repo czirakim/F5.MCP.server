@@ -27,7 +27,7 @@ headers = {
 
 class F5_object:
     
-    """this is a class for create action. It can create vips,pools,irules and profiles.
+    """this is a class for create action. It can create virtuals,pools,irules and profiles.
     It uses the  iControl REST API to make POST requests to the F5 device and sends data as a payload.
     
     """
@@ -44,7 +44,7 @@ class F5_object:
     
         Args:
             object_name is the name of the object. 
-            object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
+            object_type is the type of the object to be created. It can be : virtual,pool,irule or profile.
                     
         """
 
@@ -94,7 +94,7 @@ class F5_object:
     
         Args:
             object_name is the name of the object. 
-            object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
+            object_type is the type of the object to be created. It can be : virtual,pool,irule or profile.
                     
         """
 
@@ -118,7 +118,7 @@ class F5_object:
     
         Args:
             url_body is the configuration of teh object.
-            object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
+            object_type is the type of the object to be created. It can be : virtual,pool,irule or profile.
                     
         """
 
@@ -140,7 +140,7 @@ class F5_object:
 
         Args:
             url_body is the configuration of teh object.
-            object_type is the type of the object to be created. It can be : vip,pool,irule or profile.
+            object_type is the type of the object to be created. It can be : virtual,pool,irule or profile.
             object_name is the name of teh object to be updated.                       
 
         """
@@ -162,7 +162,7 @@ class F5_object:
         """ This tool deletes an object from an F5 device using the iControl REST API.
 
         Args:
-            object_type is the type of the object to be created. It can be : vip,pool,irule or profile.                      
+            object_type is the type of the object to be created. It can be : virtual,pool,irule or profile.                      
             object_name is the name of teh object to be deleted.
         """
 
