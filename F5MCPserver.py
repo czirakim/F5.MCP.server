@@ -17,7 +17,7 @@ def show_stats_tool(object_name: str, object_type: str):
     """ This tool shows the stats of an object from an F5 device using the iControl REST API.
      Args:
             object_name is the name of the object. 
-            object_type can be : vip,pool,irule or profile  
+            object_type can be : virtual,pool,irule or profile  
     """
     stats = F5_object(object_name = object_name, object_type = object_type)
     return stats.stats()
@@ -36,7 +36,7 @@ def list_tool(object_name: str, object_type: str):
     """ This tool lists object on an F5 device using the iControl REST API.
      Args:
             object_name is the name of the object. 
-            object_type can be : vip,pool,irule or profile  
+            object_type can be : virtual,pool,irule or profile  
     """
     list = F5_object(object_name = object_name, object_type = object_type)
     return list.list()
@@ -47,7 +47,7 @@ def create_tool(url_body: dict, object_type: str):
     """ This tool creates an object on an F5 device using the iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            object_type can be : vip,pool,irule or profile  
+            object_type can be : virtual,pool,irule or profile  
         The configuration of the object is the body for an POST request.        
        
         """  
@@ -61,7 +61,7 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the iControl REST API.
         Args:
             url_body contains the configuration of the pool. 
-            object_type can be : vip,pool,irule or profile
+            object_type can be : virtual,pool,irule or profile
             object_name is the name of the object.
 
         The configuration of the object is the body for an PATCH request.
@@ -75,7 +75,7 @@ def update_tool(url_body: dict, object_type: str, object_name: str):
 def delete_tool(object_type: str, object_name: str):
     """ This tool updates an object on an F5 device using the  iControl REST API.
         Args:            
-            object_type can be : vip,pool,irule or profile
+            object_type can be : virtual,pool,irule or profile
             object_name is the name of the object.
 
         The configuration of the pool is the body for an DELETE request.
