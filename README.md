@@ -1,4 +1,5 @@
 # F5 MCP Server
+[![smithery badge](https://smithery.ai/badge/@czirakim/F5.MCP.server)](https://smithery.ai/server/@czirakim/F5.MCP.server)
 
 <img width="724" alt="image" src="https://github.com/user-attachments/assets/6bffb811-3e89-49fb-9d31-c7173afc9adc" />
 
@@ -25,6 +26,14 @@ Only `F5object.py` is used from the Tools folder. The others were used in develo
 
 
 <img width="362" alt="image" src="https://github.com/user-attachments/assets/06ac07e0-2ab7-4675-8c7b-c3809bc364ad" />
+
+### Installing via Smithery
+
+To install F5 Device Management Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@czirakim/F5.MCP.server):
+
+```bash
+npx -y @smithery/cli install @czirakim/F5.MCP.server --client claude
+```
 
 
 ### Credits
