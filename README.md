@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/czirakim-f5-mcp-server-badge.png)](https://mseep.ai/app/czirakim-f5-mcp-server)
+
 # F5 MCP Server
 
 <img width="724" alt="image" src="https://github.com/user-attachments/assets/6bffb811-3e89-49fb-9d31-c7173afc9adc" />
